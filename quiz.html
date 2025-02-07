@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Linux Foundations multiple choice quiz</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <div class="start-screen">
+      <p id="welcome">Welcome to the Linux Foundations quiz!</p>
+      <div>Enter password</div>
+      <input type="text" type="password" class="wjyt">
+      <button id="start-button">Start</button>
+   </div>
+   <!---->
+   <div id="display-container">
+      <div class="header">
+         <div class="number-of-count">
+            <span class="number-of-question"></span>
+         </div>
+         <div class="timer-div">
+
+            <span class="time-left">15s</span>
+         </div>
+      </div>
+      <div id="container">
+         <!-- questions and options will be displayed here -->
+      </div>
+      <button id="next-button">Next</button>
+   </div>
+   <div class="score-container hide">
+      ,<div id="user-score"></div>
+      <button id="restart">Restart</button>
+   </div>
+   <!-- Script -->
+   <script src="script.js"></script>
+   <script>document.addEventListener('contextmenu', (e) => {
+         e.preventDefault();
+         return false;
+      })
+      document.addEventListener('keydown', (e) => {
+         if (e.ctrlKey || e.keycode == 123) {
+            e.stopPropagation();
+            e.preventDefault();
+         }
+      })
+   </script>
+</body>
+
+</html>
